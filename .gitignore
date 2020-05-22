@@ -1,2 +1,4 @@
 # Project exclude paths
 /target/
+/jump-generator.iml
+/.idea/
