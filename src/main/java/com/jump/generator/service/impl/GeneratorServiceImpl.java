@@ -1,6 +1,7 @@
 package com.jump.generator.service.impl;
 import com.jump.generator.domain.ColumnInfo;
 import com.jump.generator.domain.TableInfo;
+import com.jump.generator.domain.ViewInfo;
 import com.jump.generator.service.GeneratorService;
 import com.jump.generator.utils.DbUtil;
 import com.jump.generator.utils.GenUtil;
@@ -39,6 +40,29 @@ public class GeneratorServiceImpl implements GeneratorService {
         }
         return tableInfos;
     }
+
+    @Override
+    public List<ViewInfo> getViews(String name) throws Exception {
+        StringBuilder sql = new StringBuilder("SELECT\n" +
+                "\ttable_name tableName\n" +
+                "FROM\n" +
+                "\tinformation_schema. VIEWS\n" +
+                "WHERE\n" +
+                "\ttable_schema = (SELECT DATABASE())");
+        if (!ObjectUtils.isEmpty(name)) {
+            sql.append("and table_name like '%" + name + "%' ");
+        }
+        sql.append("order by table_name");
+
+        Statement statement = DbUtil.getConn().createStatement();
+
+        ResultSet rs = statement.executeQuery(sql.toString());
+        System.out.println(sql.toString());
+        List<ViewInfo> tableInfos = new ArrayList<>();
+        while (rs.next()) {
+            tableInfos.add(new ViewInfo(rs.getString("tableName")));
+        }
+        return tableInfos;    }
 
     @Override
     public List<ColumnInfo> getColumns(String name) throws Exception {

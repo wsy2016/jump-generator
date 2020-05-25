@@ -13,7 +13,7 @@ import java.sql.*;
  */
 public class DbUtil {
 
-    public static final String URL = "jdbc:mysql://localhost:3306/zeus";
+    public static final String URL = "jdbc:mysql://localhost:3306/zeus?serverTimezone=Asia/Shanghai&characterEncoding=utf8&useSSL=false";
     public static final String USER = "root";
     public static final String PASSWORD = "123456";
 

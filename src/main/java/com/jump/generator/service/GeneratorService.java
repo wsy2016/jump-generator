@@ -4,6 +4,7 @@ package com.jump.generator.service;
 import com.jump.generator.config.GenProperties;
 import com.jump.generator.domain.ColumnInfo;
 import com.jump.generator.domain.TableInfo;
+import com.jump.generator.domain.ViewInfo;
 
 import java.util.List;
 
@@ -20,6 +21,15 @@ public interface GeneratorService {
      * @return
      */
     List<TableInfo> getTables(String name) throws Exception;
+
+
+    /**
+     * 查询数据库试图元数据
+     *
+     * @param name
+     * @return
+     */
+    List<ViewInfo> getViews(String name) throws Exception;
 
     /**
      * 得到数据表的元数据

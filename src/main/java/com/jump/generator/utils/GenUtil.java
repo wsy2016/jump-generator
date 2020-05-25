@@ -210,7 +210,7 @@ public class GenUtil {
         }
 
         if ("QueryCriteria".equals(templateName)) {
-            return packagePath + "domain" + File.separator + "qeuery" + File.separator + className + "QueryCriteria.java";
+            return packagePath + "domain" + File.separator + "query" + File.separator + className + "QueryCriteria.java";
         }
 
         if ("Mapper".equals(templateName)) {
