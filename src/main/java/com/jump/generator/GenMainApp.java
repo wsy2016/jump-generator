@@ -15,12 +15,12 @@ import java.util.List;
  */
 public class GenMainApp {
 
-    private static final String DEFAULT_TABLE_NAME = "weapp_tutorial";
+    private static final String DEFAULT_TABLE_NAME = "orb_recipes";
 
     public static void main(String[] args) {
         try {
 
-            getTables("weapp");
+            //getTables("weapp");
             generator(DEFAULT_TABLE_NAME);
         } catch (Exception e) {
             e.printStackTrace();

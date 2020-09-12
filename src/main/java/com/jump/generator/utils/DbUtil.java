@@ -1,5 +1,7 @@
 package com.jump.generator.utils;
 
+import com.jump.generator.config.DbProperties;
+
 import java.sql.*;
 
 /**
@@ -13,9 +15,9 @@ import java.sql.*;
  */
 public class DbUtil {
 
-    public static final String URL = "jdbc:mysql://localhost:3306/zeus?serverTimezone=Asia/Shanghai&characterEncoding=utf8&useSSL=false";
-    public static final String USER = "root";
-    public static final String PASSWORD = "123456";
+    public static final String URL = "jdbc:mysql://"+ DbProperties.DB_URL+"?serverTimezone=Asia/Shanghai&characterEncoding=utf8&useSSL=false";
+    public static final String USER = DbProperties.DB_USER;
+    public static final String PASSWORD = DbProperties.DB_USER;
 
     public static void main(String[] args) throws Exception {
 

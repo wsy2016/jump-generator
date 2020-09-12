@@ -16,7 +16,7 @@ public class GenProperties {
     /**
      * 包路径
      **/
-    public final static String pack = "com.jump.generator.test";
+    public final static String pack = "com.jump.orb.domain";
 
     /**
      * 模块名
@@ -41,7 +41,7 @@ public class GenProperties {
     /**
      * 表前缀
      **/
-    public final static String prefix = "tb";
+    public final static String prefix = "orb";
 
     /**
      * 是否覆盖
