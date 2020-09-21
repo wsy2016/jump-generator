@@ -3,8 +3,8 @@ package com.jump.generator.utils;
 
 import cn.hutool.core.util.StrUtil;
 import cn.hutool.extra.template.*;
-import com.jump.commons.utils.FileUtil;
-import com.jump.commons.utils.StringUtils;
+import com.jump.generator.utils.FileUtil;
+import com.jump.generator.utils.StringUtils;
 import com.jump.generator.config.GenProperties;
 import com.jump.generator.domain.ColumnInfo;
 import lombok.extern.slf4j.Slf4j;

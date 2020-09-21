@@ -15,7 +15,7 @@ import java.util.List;
  */
 public class GenMainApp {
 
-    private static final String DEFAULT_TABLE_NAME = "orb_recipes";
+    private static final String DEFAULT_TABLE_NAME = "agile_board_column";
 
     public static void main(String[] args) {
         try {
